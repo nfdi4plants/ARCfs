@@ -201,7 +201,7 @@ class LFSFile(tempfile.SpooledTemporaryFile):
             hour = date_time.hour
             minute = date_time.minute
             second = date_time.second
-            new_branch = ("Galaxy_Result_"
+            new_branch = ("Update_"
                           f"{year}-{month}-{day}_{hour}.{minute}.{second}")
 
         headers = {

@@ -16,7 +16,7 @@ setup(
             'arcfs = gitlab_arc_fs.opener:ARCfsOpener',
         ]
     },
-    license="MY LICENSE",
+    license="MIT License",
     packages=['gitlab_arc_fs'],
     package_dir={'gitlab_arc_fs': 'src/gitlab_arc_fs'},
     version="0.0.15.dev1",

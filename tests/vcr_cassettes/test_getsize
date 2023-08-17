@@ -1,0 +1,1199 @@
+interactions:
+- request:
+    body: simple=True&pagination=keyset&order_by=id&sort=asc
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '50'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:47 GMT
+      Etag:
+      - W/"4634fc7440d044ef86ef0aa4397bb774"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects?id_after=344&imported=false&membership=false&order_by=id&owned=false&page=1&pagination=keyset&per_page=20&repository_checksum_failed=false&simple=true&sort=asc&starred=false&statistics=false&wiki_checksum_failed=false&with_custom_attributes=false&with_issues_enabled=false&with_merge_requests_enabled=false>;
+        rel="next"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 01GWPBXC5HWNMK4T0FTJYWYXQ9
+      X-Runtime:
+      - '0.181313'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org/api/v4/projects?id_after=344&imported=false&membership=false&order_by=id&owned=false&page=1&pagination=keyset&per_page=20&repository_checksum_failed=false&simple=true&sort=asc&starred=false&statistics=false&wiki_checksum_failed=false&with_custom_attributes=false&with_issues_enabled=false&with_merge_requests_enabled=false
+  response:
+    body:
+      string: '[]'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Length:
+      - '2'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:47 GMT
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 01GWPBXCEZSGMH7RGPW9AH2YFS
+      X-Runtime:
+      - '0.018796'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: recursive=True&pagination=keyset&order_by=id&sort=asc&per_page=100
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '66'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/tree
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WbWXNUSXbHvwvPPVLui98wjHlx2xEMbw6HIleoGW2tpbuxw9/dv0RCdSUqbxVQ
+        Q9AL6N6b52Se9X/++V//+2pTX/3LK9WMKqLo1KTUJYckQncm8HfRdp90Narp1vWrX15dpovGG2d/
+        XN38o59f/XF2Wz41/uqXV3efr8dP7m7a+NN1uvu0+7mLqzqeE0bw69X//fIoQ5ZC1SCLC1b4ZLK0
+        sQqXRe4562K6LlIUqca3H2VIt7fp8+1s5aefTtZLplVhVJDKFV+bsFm4nlNuXVVrnffRyqT1QucP
+        6XxzeX9x9v4/Xv+t/XZ2sbncXKTz9fVPpy9NxAohZVWKisa1oqrU0nmjY0vBuaq70lEW29NiG2q6
+        S7ft7ofkON2+PJGnJ++y8bGV1DMmUkx21TujrXHBxcTmdeui2h7L9c3V3VW5Ot9zMpOdOV2+PpGp
+        +eCUqIVDE6IiFbsTfAkupaRNb0pW1Zz0W5lu7i+n4jz+bLJWbrKZaIwrrOVkzLoqiyGif4xVNltj
+        jcm47Vr/SOfnm9u7qzP24LyV6cGMdU93PDwTxA+trRI62B6N8NFL0Z0wXbSxF1itEcovBLm6/761
+        Tx9emKwfTfTahWi0UoGdSEa0qlwNvhqrsAXD79oWm/6k2+aytj9n9vl8G74+OhGiZzwia2uTSMKm
+        2m2QsnaR+T/D/kRThHHyRzbhy8rrW1Ad4akk0XvAKYUPHje1qTsvpEcgEaUP2u3agt/u0+WBp/H1
+        0ckW1OSLTaVE5wO+WUKzmSBhZAtCqZyb9jUXb3YY5E27vT+/W3WErUF+EWP7x+27E7m8UCapoluq
+        QZnWRJDZd9OKwIMSBtukKdrGrVxv//VMRH/25vWvv77l3+9ef3hz9u9CyLP38oz/HGYwu8U83f/t
+        iRrdauJZsU0Xq1Sr2pbg4/B5TahRooReelGLePdlqfhVjQ8f3n14fVw1Vr89UcP0VGzQPUTLWZic
+        PIFRZmVJ7lVK72I13rexyY/ZFDWk0I9qvH734c3ro6qx59sTNYR0Tqso8fKYg5Gdk/BEdo1theRM
+        LtEbK8VzNZw8u2lvNFaFGm/eHdWq5J6PTxTRodSgS0lN+WyiQJ2apMyF0KWEN/hsUNKmF4rorSLv
+        Xh/5QNz6xyeKVKWcsS3lUKJJ1okUjInkX4U6rpuoo8KB7AtFLIr85fFIvmqijuTo0u35+kQVlUWz
+        ukSNCXkRizRVUwZK6ookI6m2Ccwu5h2R9Pa83VPfTore5ynt6dmJGDWRz5OvwtqY2c9WXWuyO+2U
+        8QZ3LZh+y2UrxsGJ/WHp9aRma3etFiF1U9kmKxpJ1doirY6k2qYpbnp0i5R60W4+tnq2uU1nF+0u
+        jRJydSd2Pz/ZDdOzU71LgUU1LxzlDtVXDs560ys1lysuR7mwr327sWP59R0JYz+S6oKyN3jJ5kfv
+        Gu2JpdohHShyrY9iYRe3nzaXn8+ub9r16kY8e2yiv0hGUuFlk3R0NEhUtNQ5vrTAQeRhnTklDutw
+        a9iuuq52bdL7Wl3yuUviakdZ0VuStaqsCFg0YaWVRWFxe3dfN21aT2x/PNFVCWGl8nQzPcbYk5M2
+        u1418bF6laLwMuXcF5b/2E39WyoUMulu83ujepjt+eP6XxuNb16aSFXDSDXBuCQ72b8QnjXFAG1F
+        pcYJWWovSm8LC9zb8axKckjH462qheJqBF2ZqtZJqpiTqUoapXQRtcvOhm2tgnrt6v6m7D2d3btz
+        unx9sk8ytBJpVk3IBKyUcIrWGh1JISM7mqMWanxWiz+e3rt2eXXR3t6kPq2IX2zY8zcm8lRL/yFy
+        0bVSh0dakqiKpZAjipRCcqp4j7OLzvl7z20hxiGHZk2VioBKKaZkUjHaRueYUvZV00fQSHnqd7+o
+        wb730JYCHXBioeRREdIr4MwO5wpB0C4JDeqRoi5Ka07OLvqXryjP1MeXD0zOhY6MisfRpgZD3SOV
+        8pHMi08Vh6trFVpHsLAjze7poJ8W/4422mCX2dKl5EwMb6IhU0ul555AgMg3NJIjHO2QZrWN3SHL
+        nl5Wdm8xCcJ6d0X7kqKirsVMgwtI5VyoXYm0iPRPDfVqN7lDkj0tpcVnig/B5OpJPUoorUqmzc/S
+        l250L8Z4qrode7JeCO0QZV81pCLYY6BfGTUm//RcssnZUA7gz7nZNPbELJLvl/x+UDWyFWfnOxP7
+        zb7ZLgAfnQX1EMJTJPkQaZ4qyEetIciUilnElf3lwFaSQ2oCD+zWgX/oe0zWVNyNBFRwH2CPGKzv
+        OnTQkMX5nHzckB7vbjb5/m6ZAvL51di5R3D2m6ced0DiB8ZsoVlJ/xUHLBopRawn0DqqhNpo97NV
+        PfZRIPHQ1j7GlzcfL69uFsDwt2s/PTFZN2rbBs7lbCQnWxMaCJ+3uTuQ4tgBqEOywS085P1fX7/9
+        9a8nF3VbEzxfdvnAZFWwTttyxyNtagnwlTKkUgMCbFAOAMd24SxQy1bbvau+RMtPDxAj+UC0Lll2
+        lXTC3EymtypjO4iZiaLEeF38IuXXm/TH5mpzcX11c3dSbn+f7cE30ux4cbI3VjvbNXtB32qFdUCt
+        GJ/VoPWNqrS2EjRl5MISlt8++8Qetpsfkmv77kQ0JahCCKKxa2e8xDEp2XpJ4LS+MVTQvQrd9SLb
+        PhPtBtE+/5hkX1+dCFYx3+ppLinhgtAWQMMYhg/0eaPU7Z6yG1hmsWdfo8NfHmYrJw+CnlxffjxY
+        wNVPTATt3sg8MNXuqOXGtgHnCtoNJUVSJHDQO6rNRTm+B2U76en27reTj/8zE/thRjObBDzOJvZh
+        ectVJpqlkmgaB4YnGaoYKQBRDbkOULIDZlfPyGW49dal94B6x9RsDu8doJkEkY6MQLAuAhYDMwnO
+        l13C8Dm9zozNBVFif6bZGhZ3PM0OXWVyZp74Uirhr1THsbWmRQHp9olYw1m1Tv6lsh6RfoFgrqFz
+        R1Tt0GUmuuFTYLM5EgVsCok6K2bADeBygcMBPphKy1IWhfhAZ9cAu2PqtoILHmCRTQBmBVkLONoY
+        kpEjwLYUAyqte5T0YmTy1p7PAdYhvGMqtwYVHqCdGgihpiZW1qNQYwTG70RgMRRCKTCgrVH0hXbA
+        ZCdf4tzJn+e3iynY87pkPRJ+842JXfVWumyZjNLALADNGNnRdyYPnFh1oqKXErdaFM+b8/N7Btlp
+        pWRaF+2phz59/qmJhCYFn5uXbKGopkTZe6c5rjojekgq036W3hfF9M1lOmt/3t2kcre5ujyCnLs+
+        OJEWHkAwXpCmS1UcujGdHgnMQ+K6qjCOBSKNebmfnPbm8vd2S/kLPoXAa6c+znXn0xN5ugUZo8Kh
+        bfSINqB2Rn+Stp1ZzkANgc1G27aNiWOFxzy6KsnOYfTAC093fGEqnWhAeQwnmYrXMYU09NX0CYW5
+        QNJ4fgfajrsa2trXCta5cE8d8dMHJrIpYFxgTDpdaUPG5IQSkvZFKPYPrNMGAYMg7gIhLtL19eby
+        499oqG5/Usodn5rIC+1l5G9IKASaWkVkwN5chO7gQWgFeOTAbZYUh6eteOiw/zP/He7Byfu3z9D5
+        50HngH3d+bGJzFkDannKDQksGGiJKUGIRcojqws5FgZHgKeLCvxJ5rvri18T7eqfP7nBL78zkRQz
+        hTuiK3iz1RYcUzWp6CSZ9thWKxCDMPQMC6ibrTopfyzIPofs5PaliRwKsD/SZwJMWsEGec2UeYAJ
+        HmJNKxm5GJ/XRfU2Pvn54gfkeHhpIkdXZAqpBENK0DjKfKYOZOogDCYG5AC7gbbT7wKAXoBia9vy
+        xLDYwnUvILKXwMMgPRFONG2+qgkwucN0kSAwMrdKqBEYVAl5UQN+1zk9CLT3lOCXFOoyVwn+hfDP
+        vBBvDEAedA+WZi6ScrH9bdT9rlPaSrF6Rp7WmaFUk3TYg6FAH+O6c55xmRulYw19DFIWNWPK95c1
+        XZZ28mmc3CM/b+2EfoxMcfpioYmRARBFTLrLoODvAOnArqMuLNALE3MeV4fx9WVI2373bo5mPA9i
+        P63Bw0oTFSxoKCAMeO0YdtdsYL5JEGXjAQkruANzBuZEiwyHdGeby3518vfbq8t/6iG8XGmigonF
+        Vgf7gGGeHpSyxIAE2RWOluB1gekETX+1NebjmtG82z3UjAYwbqFaMasIJEYDck0pKZnu4B26GdgJ
+        gQnZLgWOYkYHabBqRr5lCsk6EFwoLMy1ASJKZcaXOk7MyB94kbHAohh5ebg/6csrKrxcaWJGmSwZ
+        QcMHmwVk2PdYFIEJzIhxG5GKvzQBPsiuU/j5aLQGLRxoRpR/HVJFHCQ1V6O1xsB8bsUrkEzycbWM
+        /p1dnMFRo9GBGqybEUgw5Btt9ehPAhmxaNq8guyEp4RDeyHIUM/y0vGi0aoKB5oR3NoEpQKq3QCV
+        kRbSDYQHMcBveB/0glYESpF/khmtwTgH2hG0+SaggUoIXKABlTYMyhCYjsGTGdIwV6zB1MUhHNeO
+        DlRh1ZDgmVC7Mw21tGoNJkFlTB0qQx4KeeJSqDBNS1w25cdMa6uUutMDLQm+wYg/NsKIoOtMvTmu
+        DDSmAtF9iVXAM8rpRWt8zLy2is0daEkmEW9o+2BfDRI7/E2CUyoMBwbb2HgHKWpMOHb5whES26Eq
+        rFoSXUyDBsy4jqsVeASlESWqYaQMM6T34pgjBKsW8NjL4/2pzLauw8ulJqkNUIBo6rkJ48b8g+Lf
+        WIoMRV0E/ZThG4VeJNTuOocjpLZVMuOBpsQov1jXu+a2gBQyw+TKLttuuO/icmbE7umb6s6wehRT
+        WkNZFzqs21KE96sqXEz4IwJyE3BbFx5MBJpioBESEi5UX/jDywP+SVtaVeLlWhNjitSmEEul0Vwt
+        UhFSn+RCE57guf+UGAXq0VWa50ocjjQ8tDvI8vjKRAogeWahFJaZKOmYqBQWF9CpgcBoARhr08HU
+        5QB/fPJgnGErxWoHq6pjmsjlKtgdTfQgYFdaSPYyhIE4QDsh79NfbR1rB/Z4wJk+sl53vDzZHhwC
+        hiXUMCUlvm4StA6yRgPkh53NLSywTObdixz+sMRZ/dgOB6y2ZNzTb16fCAYbmMBvuZNALVRzY5jC
+        NRyCUO5AEIyVoZDpbH4U/3iUaK/5AEtxCdBqWC+yCFjK/DJQxujEujbcQ5GGMKkXjIjvMp+FGOv2
+        M9bE69sgaAIh0P7ZOm7gwMt1dQRqqFRAVVv72VJ/T/aFtQlL+PSbT0yOapgwpAgJ0RDiY4QTZCEw
+        Q9ktMoMtcskQX4vieebb6+i7pNp7XBLiYWGPuLXJlU7q0QSUSJ1NX0ZjPOhlFRZLfYFu7vP2mSir
+        RwZPtcVY+hhC18F69LAgLCFAR3yKZhH4xHOla3tkj3yo8yvA9vdzHg+bcHv67bOTw0nNUstCMiQQ
+        crXHZUUAKmoUtRIY3QJLlQig+I0YMLoPgNCfM6y/irV8dyYXgTBBVcktO8pVQ5amxuPwispJQ0c0
+        ejDylgzRA3DohTh7bQXUFyhCVQPhiSRgweoblBQFtkqL3wmLhguOy0n0Ia79QoJVE2EoA3TDtVsS
+        Ev5R4XV5kAVWzZYEBfcvMPmXC2sdgX0QhNcnquuc62++MTkhlwPEatWUqphpr4nfcJ0gF/kaC1RF
+        iImaSnFrOdfn3Js7u0h37WaTzlfmlesCbuequz44kZYJUW0QwzMXhyt3dLk3MYqORg+B7zNNMKHg
+        es9vfQHtI/3OvLou4hPj+JGhw1deyPXf/w/VlpiPYT4AAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:47 GMT
+      Etag:
+      - W/"a56e1d8693cd2e8937366f8e301b90e4"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=2&pagination=keyset&per_page=100&recursive=true&sort=asc>;
+        rel="next", <https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=1&pagination=keyset&per_page=100&recursive=true&sort=asc>;
+        rel="first", <https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=2&pagination=keyset&per_page=100&recursive=true&sort=asc>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - '2'
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '100'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01GWPBXCKP2GWB4D3QM5WPCFXP
+      X-Runtime:
+      - '0.166793'
+      X-Total:
+      - '115'
+      X-Total-Pages:
+      - '2'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=2&pagination=keyset&per_page=100&recursive=true&sort=asc
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA62WzW7bMBCE38XnQObvkuwtjdOeckl7KwpjSS5jIZLlSnKToOi7l3KDWrCjIk58
+        JKUdfJjdHenbr1kZZx9mBC6ScN6LyCMoqbz1wiEZozHaIEjZoKXjs4vZGmvKFYuPS+ZcPvdPm+Hs
+        q8bn0wb7VT51/TaW1M2/YlWut/UnDNuqx778SVeXN/OWumbbhvz8n0rdxEGFMwZKzX5fvIeLM3kG
+        rr8qZ+WCwb/3+sV3KuflOotfMKicl0ufxa9BZYLLc2+ZDMijg0SUuJUKnZUicU7aKutT3glQWeF5
+        7m+vLxc310UdX4n2mdZNTYsWUz8f104AaZ3ICsVtkGR4YgicCeCSiEOKEiAww4MYLWLZYTGs21Px
+        WHWPb6A6EphAOz0jiruyvyfavAFq0zZ9E5qqm49EJsCQcW0AkSwLQuXesWglCat5dioykM5EkzNs
+        38TnWCru6uJq8aVY90XCN0Duc2xCcAIYUCgyRMKrELXJoxYsMEnBJe6ssMi1Bh2GPH2eunusqrLr
+        m2W2pKLQF7dTuA9Ne5+q5qGbH9YcXexEJhCDVCAYUEAZWDQUhHAqkhfSGm0k2WicgGRfQCzXkR6L
+        bnUC4a5kzzdSmMADGVnwHJOzHpXgueE6kHcBjDUkmCenY/6WvYD3Y4u53yfh7Ur2eCOFCbygvHbO
+        a2TeOULSnuUtTpFDdhIiYkouf02HwDxscFfRtl+d1N+/JXu+kcQEn1cRc+hp5kA4Z61W0aHEzGWi
+        TOB0zkCvxSj2amrvaJmjYllTjxF7fA3icdX8+Op/Y2iZyv8fOnojguMiB5/KK+ItWAJmpOSQKT2O
+        NqVbleun5aalzWsA92/PDwoPnPv+B0lKkIMqCQAA
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:48 GMT
+      Etag:
+      - W/"73353627c6aa756d6e6cc892ebfaee40"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=1&pagination=keyset&per_page=100&recursive=true&sort=asc>;
+        rel="prev", <https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=1&pagination=keyset&per_page=100&recursive=true&sort=asc>;
+        rel="first", <https://git.nfdi4plants.org/api/v4/projects/34/repository/tree?id=34&order_by=id&page=2&pagination=keyset&per_page=100&recursive=true&sort=asc>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '2'
+      X-Per-Page:
+      - '100'
+      X-Prev-Page:
+      - '1'
+      X-Request-Id:
+      - 01GWPBXCXK29JCNRNJHQGN2GJ4
+      X-Runtime:
+      - '0.163933'
+      X-Total:
+      - '115'
+      X-Total-Pages:
+      - '2'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/branches
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WTy27bMBBFf8XgtrZFPUg9Vl30E7JLA2FEDi0hepWkkoXhf+8ochIbjhEDrXeC
+        ZniHd3jP45710CErmHptSz2oZ7QlaNtAz9ZMDV3XeFbsWaOpRWpIEyFQ6hh0lEvJIUkgk9IIiIVR
+        oUmE1Dykk64erC/PTs16FsGjLoE0WcSjeMPjTZQ8hLyIZZHkW875Dx4WnFPzCBb7WcOx4pGlQpFy
+        BqnBuEpkJkEluZEq5KhBhKEQIKpcSPa0Zr7x7WzJYje84MqpGsnimnXoHOwuKr9nqzB5unJ5XMav
+        oWv65vnzP3bQtCSpl8K2sk1bw+R+1vW01bP4IkDmNFm8wd6yW0/rvpj5Wfp+7HvvzXO9JSdoaan7
+        w5q9YlVOdnZWez+6Igh2jd/2RjfJ2ELv3Xawu2B2C36wgYNubBGsKm0PDv8Em2C5QHBzNmhoh3aH
+        FChvJ6R3toNHRbFghYHW0R+NL9gOI12yVNCX4+Tqa7U3qY/iF90GppbSdlT+d7veIgaXrBzWHyBR
+        Ur5gJ89iaRRPY0gFcgkV8qwycawyo6JMRooCrGVYnbPzfuoqO+lDGBZxVPBsYYe+LtkJVZyj0oZY
+        zTQQtKilTENTgYAMZGYiaVKjslN2pnHO8cpQVlYWDRKLCt2q6VeNgy3V6Pn9GVM3nbgza1fWcXfW
+        rsy9E2s3Z+mEtSMAJ7At9N2BtUX4P6H2RtPh6S9/K0zLqAYAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:48 GMT
+      Etag:
+      - W/"cb080e6cbad0e2ea4a7d64d9432e4b56"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="first", <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01GWPBXD7J7MN6D459XC015ZFZ
+      X-Runtime:
+      - '0.084309'
+      X-Total:
+      - '2'
+      X-Total-Pages:
+      - '1'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/branches
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WTy27bMBBFf8XgtrZFPUg9Vl30E7JLA2FEDi0hepWkkoXhf+8ochIbjhEDrXeC
+        ZniHd3jP45710CErmHptSz2oZ7QlaNtAz9ZMDV3XeFbsWaOpRWpIEyFQ6hh0lEvJIUkgk9IIiIVR
+        oUmE1Dykk64erC/PTs16FsGjLoE0WcSjeMPjTZQ8hLyIZZHkW875Dx4WnFPzCBb7WcOx4pGlQpFy
+        BqnBuEpkJkEluZEq5KhBhKEQIKpcSPa0Zr7x7WzJYje84MqpGsnimnXoHOwuKr9nqzB5unJ5XMav
+        oWv65vnzP3bQtCSpl8K2sk1bw+R+1vW01bP4IkDmNFm8wd6yW0/rvpj5Wfp+7HvvzXO9JSdoaan7
+        w5q9YlVOdnZWez+6Igh2jd/2RjfJ2ELv3Xawu2B2C36wgYNubBGsKm0PDv8Em2C5QHBzNmhoh3aH
+        FChvJ6R3toNHRbFghYHW0R+NL9gOI12yVNCX4+Tqa7U3qY/iF90GppbSdlT+d7veIgaXrBzWHyBR
+        Ur5gJ89iaRRPY0gFcgkV8qwycawyo6JMRooCrGVYnbPzfuoqO+lDGBZxVPBsYYe+LtkJVZyj0oZY
+        zTQQtKilTENTgYAMZGYiaVKjslN2pnHO8cpQVlYWDRKLCt2q6VeNgy3V6Pn9GVM3nbgza1fWcXfW
+        rsy9E2s3Z+mEtSMAJ7At9N2BtUX4P6H2RtPh6S9/K0zLqAYAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:48 GMT
+      Etag:
+      - W/"cb080e6cbad0e2ea4a7d64d9432e4b56"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="first", <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01GWPBXDEX38HF1996ET1D38Y7
+      X-Runtime:
+      - '0.028130'
+      X-Total:
+      - '2'
+      X-Total-Pages:
+      - '1'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/branches
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WTy27bMBBFf8XgtrZFPUg9Vl30E7JLA2FEDi0hepWkkoXhf+8ochIbjhEDrXeC
+        ZniHd3jP45710CErmHptSz2oZ7QlaNtAz9ZMDV3XeFbsWaOpRWpIEyFQ6hh0lEvJIUkgk9IIiIVR
+        oUmE1Dykk64erC/PTs16FsGjLoE0WcSjeMPjTZQ8hLyIZZHkW875Dx4WnFPzCBb7WcOx4pGlQpFy
+        BqnBuEpkJkEluZEq5KhBhKEQIKpcSPa0Zr7x7WzJYje84MqpGsnimnXoHOwuKr9nqzB5unJ5XMav
+        oWv65vnzP3bQtCSpl8K2sk1bw+R+1vW01bP4IkDmNFm8wd6yW0/rvpj5Wfp+7HvvzXO9JSdoaan7
+        w5q9YlVOdnZWez+6Igh2jd/2RjfJ2ELv3Xawu2B2C36wgYNubBGsKm0PDv8Em2C5QHBzNmhoh3aH
+        FChvJ6R3toNHRbFghYHW0R+NL9gOI12yVNCX4+Tqa7U3qY/iF90GppbSdlT+d7veIgaXrBzWHyBR
+        Ur5gJ89iaRRPY0gFcgkV8qwycawyo6JMRooCrGVYnbPzfuoqO+lDGBZxVPBsYYe+LtkJVZyj0oZY
+        zTQQtKilTENTgYAMZGYiaVKjslN2pnHO8cpQVlYWDRKLCt2q6VeNgy3V6Pn9GVM3nbgza1fWcXfW
+        rsy9E2s3Z+mEtSMAJ7At9N2BtUX4P6H2RtPh6S9/K0zLqAYAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:48 GMT
+      Etag:
+      - W/"cb080e6cbad0e2ea4a7d64d9432e4b56"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="first", <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01GWPBXDMDDR5QQ3AWBDJCN74T
+      X-Runtime:
+      - '0.028952'
+      X-Total:
+      - '2'
+      X-Total-Pages:
+      - '1'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      PRIVATE-TOKEN:
+      - ''
+      User-Agent:
+      - python-requests/2.28.2
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/branches
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7WTy27bMBBFf8XgtrZFPUg9Vl30E7JLA2FEDi0hepWkkoXhf+8ochIbjhEDrXeC
+        ZniHd3jP45710CErmHptSz2oZ7QlaNtAz9ZMDV3XeFbsWaOpRWpIEyFQ6hh0lEvJIUkgk9IIiIVR
+        oUmE1Dykk64erC/PTs16FsGjLoE0WcSjeMPjTZQ8hLyIZZHkW875Dx4WnFPzCBb7WcOx4pGlQpFy
+        BqnBuEpkJkEluZEq5KhBhKEQIKpcSPa0Zr7x7WzJYje84MqpGsnimnXoHOwuKr9nqzB5unJ5XMav
+        oWv65vnzP3bQtCSpl8K2sk1bw+R+1vW01bP4IkDmNFm8wd6yW0/rvpj5Wfp+7HvvzXO9JSdoaan7
+        w5q9YlVOdnZWez+6Igh2jd/2RjfJ2ELv3Xawu2B2C36wgYNubBGsKm0PDv8Em2C5QHBzNmhoh3aH
+        FChvJ6R3toNHRbFghYHW0R+NL9gOI12yVNCX4+Tqa7U3qY/iF90GppbSdlT+d7veIgaXrBzWHyBR
+        Ur5gJ89iaRRPY0gFcgkV8qwycawyo6JMRooCrGVYnbPzfuoqO+lDGBZxVPBsYYe+LtkJVZyj0oZY
+        zTQQtKilTENTgYAMZGYiaVKjslN2pnHO8cpQVlYWDRKLCt2q6VeNgy3V6Pn9GVM3nbgza1fWcXfW
+        rsy9E2s3Z+mEtSMAJ7At9N2BtUX4P6H2RtPh6S9/K0zLqAYAAA==
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 29 Mar 2023 09:41:49 GMT
+      Etag:
+      - W/"cb080e6cbad0e2ea4a7d64d9432e4b56"
+      Link:
+      - <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="first", <https://git.nfdi4plants.org/api/v4/projects/34/repository/branches?id=34&page=1&per_page=20>;
+        rel="last"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - 01GWPBXDSEYDRV55PGX2ZRWD2B
+      X-Runtime:
+      - '0.025045'
+      X-Total:
+      - '2'
+      X-Total-Pages:
+      - '1'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      PRIVATE-TOKEN:
+      - ''
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/.gitattributes/raw?ref=main&lfs=true
+  response:
+    body:
+      string: '**/dataset/** filter=lfs diff=lfs merge=lfs -text
+
+        /assays/Talinum_RNASeq_minimal/dataset/DB_097_CAMMD_CAGATC_L001_R1_001.fastq.gz
+        filter=lfs diff=lfs merge=lfs -text
+
+        /assays/Talinum_RNASeq_minimal/dataset/DB_163_reC3MD_GTGAAA_L001_R1_001.fastq.gz
+        filter=lfs diff=lfs merge=lfs -text
+
+        /assays/Talinum_RNASeq_minimal/dataset/DB_099_CAMMD_CTTGTA_L001_R1_001.fastq.gz
+        filter=lfs diff=lfs merge=lfs -text
+
+        /assays/Talinum_RNASeq_minimal/dataset/DB_103_CAMMD_AGTCAA_L001_R1_001.fastq.gz
+        filter=lfs diff=lfs merge=lfs -text
+
+        /assays/Talinum_RNASeq_minimal/dataset/DB_161_reC3MD_GTCCGC_L001_R1_001.fastq.gz
+        filter=lfs diff=lfs merge=lfs -text
+
+        /assays/Talinum_RNASeq_minimal/dataset/DB_165_re-C3MD_GTGAAA_L002_R1_001.fastq.gz
+        filter=lfs diff=lfs merge=lfs -text
+
+        /runs/kallisto_index/out/kallisto_index filter=lfs diff=lfs merge=lfs -text
+
+        '
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate, no-store, no-cache
+      Content-Disposition:
+      - inline; filename=".gitattributes"; filename*=UTF-8''.gitattributes
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Wed, 29 Mar 2023 09:41:49 GMT
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Blob-Id:
+      - 7c3cf7781734b30a8e0cfccc6bdf9857f38f05a5
+      X-Gitlab-Commit-Id:
+      - 9836fc073a75e06abe08bf33c8fc2862c55ad61b
+      X-Gitlab-Content-Sha256:
+      - d3805e57712c6996401ddc821b7c0551df5fa56f2f6d12b4e5651a8f06eeae0f
+      X-Gitlab-Encoding:
+      - base64
+      X-Gitlab-Execute-Filemode:
+      - 'false'
+      X-Gitlab-File-Name:
+      - .gitattributes
+      X-Gitlab-File-Path:
+      - .gitattributes
+      X-Gitlab-Last-Commit-Id:
+      - b0869a8d681cda90cce3ee27563898d6fcc7a7b9
+      X-Gitlab-Ref:
+      - main
+      X-Gitlab-Size:
+      - '826'
+      X-Request-Id:
+      - 01GWPBXDWH60Q5QBG1E05DY6EJ
+      X-Runtime:
+      - '0.133244'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/.gitattributes/raw?ref=main&lfs=true
+- request:
+    body: null
+    headers:
+      PRIVATE-TOKEN:
+      - ''
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/.gitignore/raw?ref=main&lfs=true
+  response:
+    body:
+      string: "## Ignore Visual Studio temporary files, build results, and\n## files
+        generated by popular Visual Studio add-ons.\n##\n## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore\n\n#
+        User-specific files\n*.rsuser\n*.suo\n*.user\n*.userosscache\n*.sln.docstates\n\n#
+        User-specific files (MonoDevelop/Xamarin Studio)\n*.userprefs\n\n# Mono auto
+        generated files\nmono_crash.*\n\n# Build results\n[Dd]ebug/\n[Dd]ebugPublic/\n[Rr]elease/\n[Rr]eleases/\nx64/\nx86/\n[Aa][Rr][Mm]/\n[Aa][Rr][Mm]64/\nbld/\n[Bb]in/\n[Oo]bj/\n[Ll]og/\n[Ll]ogs/\n\n#
+        Visual Studio 2015/2017 cache/options directory\n.vs/\n# Uncomment if you
+        have tasks that create the project's static files in wwwroot\n#wwwroot/\n\n#
+        Visual Studio 2017 auto generated files\nGenerated\\ Files/\n\n# MSTest test
+        Results\n[Tt]est[Rr]esult*/\n[Bb]uild[Ll]og.*\n\n# NUnit\n*.VisualState.xml\nTestResult.xml\nnunit-*.xml\n\n#
+        Build Results of an ATL Project\n[Dd]ebugPS/\n[Rr]eleasePS/\ndlldata.c\n\n#
+        Benchmark Results\nBenchmarkDotNet.Artifacts/\n\n# .NET Core\nproject.lock.json\nproject.fragment.lock.json\nartifacts/\n\n#
+        StyleCop\nStyleCopReport.xml\n\n# Files built by Visual Studio\n*_i.c\n*_p.c\n*_h.h\n*.ilk\n*.meta\n*.obj\n*.iobj\n*.pch\n*.pdb\n*.ipdb\n*.pgc\n*.pgd\n*.rsp\n*.sbr\n*.tlb\n*.tli\n*.tlh\n*.tmp\n*.tmp_proj\n*_wpftmp.csproj\n*.log\n*.vspscc\n*.vssscc\n.builds\n*.pidb\n*.svclog\n*.scc\n\n#
+        Chutzpah Test files\n_Chutzpah*\n\n# Visual C++ cache files\nipch/\n*.aps\n*.ncb\n*.opendb\n*.opensdf\n*.sdf\n*.cachefile\n*.VC.db\n*.VC.VC.opendb\n\n#
+        Visual Studio profiler\n*.psess\n*.vsp\n*.vspx\n*.sap\n\n# Visual Studio Trace
+        Files\n*.e2e\n\n# TFS 2012 Local Workspace\n$tf/\n\n# Guidance Automation
+        Toolkit\n*.gpState\n\n# ReSharper is a .NET coding add-in\n_ReSharper*/\n*.[Rr]e[Ss]harper\n*.DotSettings.user\n\n#
+        TeamCity is a build add-in\n_TeamCity*\n\n# DotCover is a Code Coverage Tool\n*.dotCover\n\n#
+        AxoCover is a Code Coverage Tool\n.axoCover/*\n!.axoCover/settings.json\n\n#
+        Visual Studio code coverage results\n*.coverage\n*.coveragexml\n\n# NCrunch\n_NCrunch_*\n.*crunch*.local.xml\nnCrunchTemp_*\n\n#
+        MightyMoose\n*.mm.*\nAutoTest.Net/\n\n# Web workbench (sass)\n.sass-cache/\n\n#
+        Installshield output folder\n[Ee]xpress/\n\n# DocProject is a documentation
+        generator add-in\nDocProject/buildhelp/\nDocProject/Help/*.HxT\nDocProject/Help/*.HxC\nDocProject/Help/*.hhc\nDocProject/Help/*.hhk\nDocProject/Help/*.hhp\nDocProject/Help/Html2\nDocProject/Help/html\n\n#
+        Click-Once directory\npublish/\n\n# Publish Web Output\n*.[Pp]ublish.xml\n*.azurePubxml\n#
+        Note: Comment the next line if you want to checkin your web deploy settings,\n#
+        but database connection strings (with potential passwords) will be unencrypted\n*.pubxml\n*.publishproj\n\n#
+        Microsoft Azure Web App publish settings. Comment the next line if you want
+        to\n# checkin your Azure Web App publish settings, but sensitive information
+        contained\n# in these scripts will be unencrypted\nPublishScripts/\n\n# NuGet
+        Packages\n*.nupkg\n# NuGet Symbol Packages\n*.snupkg\n# The packages folder
+        can be ignored because of Package Restore\n**/[Pp]ackages/*\n# except build/,
+        which is used as an MSBuild target.\n!**/[Pp]ackages/build/\n# Uncomment if
+        necessary however generally it will be regenerated when needed\n#!**/[Pp]ackages/repositories.config\n#
+        NuGet v3's project.json files produces more ignorable files\n*.nuget.props\n*.nuget.targets\n\n#
+        Microsoft Azure Build Output\ncsx/\n*.build.csdef\n\n# Microsoft Azure Emulator\necf/\nrcf/\n\n#
+        Windows Store app package directories and files\nAppPackages/\nBundleArtifacts/\nPackage.StoreAssociation.xml\n_pkginfo.txt\n*.appx\n*.appxbundle\n*.appxupload\n\n#
+        Visual Studio cache files\n# files ending in .cache can be ignored\n*.[Cc]ache\n#
+        but keep track of directories ending in .cache\n!?*.[Cc]ache/\n\n# Others\nClientBin/\n~$*\n*~\n*.dbmdl\n*.dbproj.schemaview\n*.jfm\n*.pfx\n*.publishsettings\norleans.codegen.cs\n\n#
+        Including strong name files can present a security risk\n# (https://github.com/github/gitignore/pull/2483#issue-259490424)\n#*.snk\n\n#
+        Since there are multiple workflows, uncomment next line to ignore bower_components\n#
+        (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)\n#bower_components/\n\n#
+        RIA/Silverlight projects\nGenerated_Code/\n\n# Backup & report files from
+        converting an old project file\n# to a newer Visual Studio version. Backup
+        files are not needed,\n# because we have git ;-)\n_UpgradeReport_Files/\nBackup*/\nUpgradeLog*.XML\nUpgradeLog*.htm\nServiceFabricBackup/\n*.rptproj.bak\n\n#
+        SQL Server files\n*.mdf\n*.ldf\n*.ndf\n\n# Business Intelligence projects\n*.rdl.data\n*.bim.layout\n*.bim_*.settings\n*.rptproj.rsuser\n*-
+        [Bb]ackup.rdl\n*- [Bb]ackup ([0-9]).rdl\n*- [Bb]ackup ([0-9][0-9]).rdl\n\n#
+        Microsoft Fakes\nFakesAssemblies/\n\n# GhostDoc plugin setting file\n*.GhostDoc.xml\n\n#
+        Node.js Tools for Visual Studio\n.ntvs_analysis.dat\nnode_modules/\n\n# Visual
+        Studio 6 build log\n*.plg\n\n# Visual Studio 6 workspace options file\n*.opt\n\n#
+        Visual Studio 6 auto-generated workspace file (contains which files were open
+        etc.)\n*.vbw\n\n# Visual Studio LightSwitch build output\n**/*.HTMLClient/GeneratedArtifacts\n**/*.DesktopClient/GeneratedArtifacts\n**/*.DesktopClient/ModelManifest.xml\n**/*.Server/GeneratedArtifacts\n**/*.Server/ModelManifest.xml\n_Pvt_Extensions\n\n#
+        Paket dependency manager\n.paket/paket.exe\npaket-files/\n\n# FAKE - F# Make\n.fake/\n\n#
+        CodeRush personal settings\n.cr/personal\n\n# Python Tools for Visual Studio
+        (PTVS)\n__pycache__/\n*.pyc\n\n# Cake - Uncomment if you are using it\n# tools/**\n#
+        !tools/packages.config\n\n# Tabs Studio\n*.tss\n\n# Telerik's JustMock configuration
+        file\n*.jmconfig\n\n# BizTalk build output\n*.btp.cs\n*.btm.cs\n*.odx.cs\n*.xsd.cs\n\n#
+        OpenCover UI analysis results\nOpenCover/\n\n# Azure Stream Analytics local
+        run output\nASALocalRun/\n\n# MSBuild Binary and Structured Log\n*.binlog\n\n#
+        NVidia Nsight GPU debugger configuration file\n*.nvuser\n\n# MFractors (Xamarin
+        productivity tool) working folder\n.mfractor/\n\n# Local History for Visual
+        Studio\n.localhistory/\n\n# BeatPulse healthcheck temp database\nhealthchecksdb\n\n#
+        Backup folder for Package Reference Convert tool in Visual Studio 2017\nMigrationBackup/\n\n#
+        Ionide (cross platform F# VS Code tools) working folder\n.ionide/\n\n\n\n\n##
+        MacOS temporaries\n## \n\n# General\n.DS_Store\n.AppleDouble\n.LSOverride\n\n#
+        Icon must end with two \\r\nIcon\n\n# Thumbnails\n._*\n\n# Files that might
+        appear in the root of a volume\n.DocumentRevisions-V100\n.fseventsd\n.Spotlight-V100\n.TemporaryItems\n.Trashes\n.VolumeIcon.icns\n.com.apple.timemachine.donotpresent\n\n#
+        Directories potentially created on remote AFP share\n.AppleDB\n.AppleDesktop\nNetwork
+        Trash Folder\nTemporary Items\n.apdisk\n\n\n# R temporaries\n.Rhistory\n.RData\n"
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate, no-store, no-cache
+      Content-Disposition:
+      - inline; filename=".gitignore"; filename*=UTF-8''.gitignore
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Wed, 29 Mar 2023 09:41:49 GMT
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Blob-Id:
+      - 11819f2d595ad57d5666a7dea2cb52f9fe976118
+      X-Gitlab-Commit-Id:
+      - 9836fc073a75e06abe08bf33c8fc2862c55ad61b
+      X-Gitlab-Content-Sha256:
+      - d38026fdcff155eb89e152b5e211f11a684b8508a106aac23f4e656d30eb84c5
+      X-Gitlab-Encoding:
+      - base64
+      X-Gitlab-Execute-Filemode:
+      - 'false'
+      X-Gitlab-File-Name:
+      - .gitignore
+      X-Gitlab-File-Path:
+      - .gitignore
+      X-Gitlab-Last-Commit-Id:
+      - 4031b19c6dbf7c09c1c0655ea0cffdcce030fb3e
+      X-Gitlab-Ref:
+      - main
+      X-Gitlab-Size:
+      - '6467'
+      X-Request-Id:
+      - 01GWPBXDX27DD9MH8S0NE9KEG1
+      X-Runtime:
+      - '0.134382'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/.gitignore/raw?ref=main&lfs=true
+- request:
+    body: null
+    headers:
+      PRIVATE-TOKEN:
+      - ''
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/isa.investigation.xlsx/raw?ref=main&lfs=true
+  response:
+    body:
+      string: !!binary |
+        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
+        vq3diagZK4vrHqJqdYhyRMpBplKJh12l5aAj241SG4VTIpHmBz/WzphDYjC4/QFQSwMEFAAACAAA
+        ZXR4ViAWvsUoAQAAKAEAAAsAAABfcmVscy8ucmVsc++7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5j
+        b2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54
+        bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBU
+        eXBlPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvb2ZmaWNlRG9jdW1lbnQvMjAw
+        Ni9yZWxhdGlvbnNoaXBzL29mZmljZURvY3VtZW50IiBUYXJnZXQ9Ii94bC93b3JrYm9vay54bWwi
+        IElkPSJSMTgzZGEzNTEwYTdjNGNmOSIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBBQAAAgIAGV0eFYP
+        Sk7N3AAAAMsBAAAaAAAAeGwvX3JlbHMvd29ya2Jvb2sueG1sLnJlbHO1kb1OwzAQgF/Fup04LnYJ
+        Vd0uLKylL2A55zhqYls+F8qzMfBIvAJWFxqJgYXpdH+fPt19fXxu95d5Yq+YaYxBg2haYBhs7Mcw
+        aDgXd9fBfrc94GRKnSA/JmJ1JZAGX0racE7W42yoiQlD7biYZ1NqmgeejD2ZAfmqbdc83zJgyWTH
+        94R/IUbnRotP0Z5nDOUXMH+L+UQesQA7mjxg0cAv00+Z+DWIppKBPfcaDgalWzvVdVIoKdEA4/+m
+        R95k7F9KrgempeKidaO3emzt/YMQwikrUamrHl+8ZPcNUEsDBBQAAAgIAGV0eFbrpBx3/gAAAGYC
+        AAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbK1SzUrEMBB+lZKrNOl6EJG2e1i9qqAvEJJpGzZ/ZKZr
+        fTYPPpKvYDYrBUUQYU9DMt/fTPLx9t5uF2erAyQ0wXdswxtWgVdBGz92bKahvmbbvn1+jYBVhnrs
+        2EQUb4RANYGTyEMEnztDSE5SPqZRRKn2cgRx2TRXQgVP4Kmmowbr21sY5Gypulvy9ck201m1O+GO
+        Vh2TMVqjJOW2OHj9w6QOw2AU6KBmlykcYwKpcQIgZ3mp3EnjL4qw+NUzgcX/mX5NxTOzYHAyEVeL
+        h7zEZDRUjzLRvXRZTyxWvIS0L4FQlLLh5x121f8rCE4ygX6ilF8Wzxzim/YaRJRf038CUEsBAhQD
+        FAAACAgAZXR4VqpQrN7EAAAALwEAAA8AAAAAAAAAAAAAAAAAAAAAAHhsL3dvcmtib29rLnhtbFBL
+        AQIUAxQAAAgIAGV0eFaxyPp9Ig8AAKZnAAAYAAAAAAAAAAAAAAAAAPEAAAB4bC93b3Jrc2hlZXRz
+        L3NoZWV0MS54bWxQSwECFAMUAAAICABldHhWDR656GcAAABzAAAAFAAAAAAAAAAAAAAAAABJEAAA
+        eGwvc2hhcmVkU3RyaW5ncy54bWxQSwECFAMUAAAIAABldHhWIBa+xSgBAAAoAQAACwAAAAAAAAAA
+        AAAAAADiEAAAX3JlbHMvLnJlbHNQSwECFAMUAAAICABldHhWD0pOzdwAAADLAQAAGgAAAAAAAAAA
+        AAAAAAAzEgAAeGwvX3JlbHMvd29ya2Jvb2sueG1sLnJlbHNQSwECFAMUAAAICABldHhW66Qcd/4A
+        AABmAgAAEwAAAAAAAAAAAAAAAABHEwAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAABgAGAIcB
+        AAB2FAAAAAA=
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate, no-store, no-cache
+      Content-Disposition:
+      - attachment; filename="isa.investigation.xlsx"; filename*=UTF-8''isa.investigation.xlsx
+      Content-Length:
+      - '5651'
+      Content-Type:
+      - application/octet-stream
+      Date:
+      - Wed, 29 Mar 2023 09:41:49 GMT
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Blob-Id:
+      - 5568470d34cd2f4344f4bdab2194e2c62593b9bb
+      X-Gitlab-Commit-Id:
+      - 9836fc073a75e06abe08bf33c8fc2862c55ad61b
+      X-Gitlab-Content-Sha256:
+      - 18035aa9998677182907d617ef1d4c34dc2a513cc81278bdd06e4a6340a829a3
+      X-Gitlab-Encoding:
+      - base64
+      X-Gitlab-Execute-Filemode:
+      - 'false'
+      X-Gitlab-File-Name:
+      - isa.investigation.xlsx
+      X-Gitlab-File-Path:
+      - isa.investigation.xlsx
+      X-Gitlab-Last-Commit-Id:
+      - 19b1031a97a85323f2b96bbd7541de3d94fb37f8
+      X-Gitlab-Ref:
+      - main
+      X-Gitlab-Size:
+      - '5651'
+      X-Request-Id:
+      - 01GWPBXDX7DTYKW9HE58VHDBE7
+      X-Runtime:
+      - '0.139078'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/isa.investigation.xlsx/raw?ref=main&lfs=true
+- request:
+    body: null
+    headers:
+      PRIVATE-TOKEN:
+      - ''
+    method: GET
+    uri: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/README.md/raw?ref=main&lfs=true
+  response:
+    body:
+      string: '# SampleARC RNAseq
+
+
+        This is a minimal example ARC packaging an mRNA-Seq dataset with metadata
+        and computations.
+
+
+        :bulb: Check out the [wiki](https://git.nfdi4plants.org/brilator/samplearc_rnaseq/-/wikis/home)
+        to this project for more information.
+
+
+        ## Data origin
+
+
+        - see [./isa.investigation.xlsx](./isa.investigation.xlsx) for details.
+
+        - Published under: <https://doi.org/10.1104/pp.15.01076>
+
+
+        ## Workflow overview
+
+
+        ![](_workflow_scheme/workflow-scheme.drawio.png)'
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate, no-store, no-cache
+      Content-Disposition:
+      - inline; filename="README.md"; filename*=UTF-8''README.md
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Wed, 29 Mar 2023 09:41:49 GMT
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=63072000
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Gitlab-Blob-Id:
+      - 935e079765989b548e6aa75bf62d89f4828a5863
+      X-Gitlab-Commit-Id:
+      - 9836fc073a75e06abe08bf33c8fc2862c55ad61b
+      X-Gitlab-Content-Sha256:
+      - bfb5aae60d05e33c4ae39afbd393b4c00cc00e6f57dcf6b04ffd1e87d07ecd7b
+      X-Gitlab-Encoding:
+      - base64
+      X-Gitlab-Execute-Filemode:
+      - 'false'
+      X-Gitlab-File-Name:
+      - README.md
+      X-Gitlab-File-Path:
+      - README.md
+      X-Gitlab-Last-Commit-Id:
+      - f9eb723e8c3f119bdf5c8735014c26be57231c28
+      X-Gitlab-Ref:
+      - main
+      X-Gitlab-Size:
+      - '464'
+      X-Request-Id:
+      - 01GWPBXDX27DD9MH8S0KMN6X0K
+      X-Runtime:
+      - '0.160056'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+    url: https://git.nfdi4plants.org//api/v4/projects/34/repository/files/README.md/raw?ref=main&lfs=true
+version: 1

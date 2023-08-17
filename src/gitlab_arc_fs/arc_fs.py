@@ -1077,26 +1077,3 @@ class ARCfs(FS):
 
     def setinfo():
         raise Unsupported
-
-
-if __name__ == "__main__":
-
-    load_dotenv()
-    token = getenv('GIT_ACCESS_TOKEN')
-
-    server_url = "https://git.nfdi4plants.org/"
-    fs = ARCfs(token, server_url)
-
-    filepath = "/home/julian/Schreibtisch/blobb"
-    # filepath = "/home/julian/Downloads/220523.jpg.binary"
-    # filepath = "/home/julian/Downloads/DB_097_CAMMD_CAGATC_L001_R1_001.fastq.gz" # NOQA
-
-    repopath = "Julian_Weidhase-Test/bigfile"
-    repo_filepath = "Julian_Weidhase-ARCfs_Demo/test/teekessel.jpg"
-    # cleaned = fs.clean_file_ext(repopath)
-
-    with open(filepath, "wb") as local:
-        with fs.open(repopath, mode="rb") as remote:
-            for byte in iter(lambda: remote.read(4096),
-                             b""):
-                local.write(byte)

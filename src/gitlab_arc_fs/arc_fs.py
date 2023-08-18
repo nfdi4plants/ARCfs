@@ -909,11 +909,11 @@ class ARCfs(FS):
 
         Arguments:
             path (str): A path on the filesystem.
-            file (io.IOBase): a file object open for reading in
-                binary mode.
-            chunk_size (int, optional): Number of bytes to read at a
-                time, if a simple copy is used, or `None` to use
-                sensible default.
+            file (io.IOBase): a file object opened for reading in
+                              binary mode.
+            chunk_size (int, optional): Number of bytes to read at a time, if
+                                        a simple copy is used, or `None` to use
+                                        sensible default.
             ref (str, optional): The destionation branch of the issued merge
                                  request.
             **options: Implementation specific options required to open
@@ -1026,14 +1026,21 @@ class ARCfs(FS):
 
     def makedir(self, path: str, permissions: Permissions = None,
                 recreate: bool = False):
-        """TODO: Write verbose summery here, especially a Note about the
-        "phantom" creation of directories.
+        """
+        Make a directory. This is done by creating a "phantom" directory
 
-        Args:
-            path (str): _description_
-            permissions (Permissions, optional): _description_.
-                                                 Defaults to None.
-            recreate (bool, optional): _description_. Defaults to False.
+        Arguments:
+            path (str): Path to directory from root.
+            permissions
+            (~fs.permissions.Permissions, optional): a `Permissions` instance,
+                                                     or `None` to use default.
+                                                     (Not used)
+            recreate (bool): Set to `True` to avoid raising an error if
+                             the directory already exists
+                             (defaults to `False`).
+
+        Returns:
+            ~fs.subfs.SubFS: a filesystem whose root is the new directory.
 
         Raises:
             fs.errors.DirectoryExists: If the path already exists.

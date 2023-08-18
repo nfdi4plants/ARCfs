@@ -15,9 +15,10 @@ Alternatively:
 2. Change directory into ARCfs
 3. Run `pip install .`
 
-## Getting started
 
 **NOTE:** For read acces, an API token with the scope "read_api" is sufficient. For write access the scope "api" is requiered. You can find more information [here](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token).
+
+## Getting started
 
 ### Creating an ARCfs object
 
@@ -98,4 +99,9 @@ with open("<local_path>", "rb") as local_file:
 More information about the PyFilesystem API can be founde [here](https://docs.pyfilesystem.org/en/latest/interface.html).
 
 
+## Further important information
 
+ARCfs does not support setting file information nor the deletion of directories or files (*setinfo()*, *remove()*, *removedir()*).
+
+Upon performing any write operation with ARCfs, the file in question is uploaded as LFS file, a new branch is created and pointer file is commited in the newly created branch.
+Finally, a merge request into the main branch is created.

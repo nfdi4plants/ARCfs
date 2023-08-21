@@ -20,6 +20,6 @@ setup(
     packages=['gitlab_arc_fs'],
     package_dir={'gitlab_arc_fs': 'src/gitlab_arc_fs'},
     version="0.0.15.dev1",
-    url="https://git.bwcloud.uni-freiburg.de/julian.weidhase/GitlabFS",
+    url="https://github.com/nfdi4plants/ARCfs",
     python_requires='>=3.8'
 )

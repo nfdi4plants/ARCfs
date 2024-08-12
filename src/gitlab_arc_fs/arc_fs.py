@@ -522,11 +522,6 @@ class ARCfs(FS):
             print("Exiting program")
             raise SystemExit(e)
 
-        # This could possibly be done asynchronously, but
-        # the Gitlab API suggests using the URLs contained in
-        # the headers instead of constructing URLs.
-        num_pages = int(r.headers["x-total-pages"])
-
         # tree is a now list of dictionaries, one for each
         # ressource in a agiven repository with, the keys
         # "id", "name", "type", "path" and "mode".
@@ -535,7 +530,11 @@ class ARCfs(FS):
         # Get the repo tree for all files in the repository.
         # This is done by following the links specified in the
         # response. One for each following page.
-        for i in range(num_pages-1):
+
+        # This could possibly be done asynchronously, but
+        # the Gitlab API suggests using the URLs contained in
+        # the headers instead of constructing URLs.
+        while r.links.get("next") is not None:
             download_url = r.links["next"]["url"]
             try:
                 r = requests.get(download_url,

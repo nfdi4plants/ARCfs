@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+build/
+*.egg-info/
+*.vscode
+MISC/
+gitlab_fs/.env
+*.venv
+*.env
+*dist*
+**/teststuff.py
+**/output.log
+.pytest_cache

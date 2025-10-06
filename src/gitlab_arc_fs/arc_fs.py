@@ -15,12 +15,14 @@ import os # NOQA
 import requests
 import io
 import logging
+from json.decoder import JSONDecodeError
+from requests.auth import HTTPBasicAuth
 
 logging.basicConfig(filename="output.log",
                     level=logging.ERROR)
 
 try:
-    from dotenv import load_dotenv
+    from dotenv import load_dotenv # NOQA
     from os import getenv
 except ImportError:
     pass
@@ -124,6 +126,7 @@ class ARCfs(FS):
         # More information: https://docs.pyfilesystem.org/en/latest/info.html
         self.info_dict = {}
         self._build_initial_repository_info()
+        print("lol")
 
     def _build_initial_repository_info(self) -> None:
         """
@@ -810,7 +813,7 @@ class ARCfs(FS):
         (id, root_path) = self._get_repo_id_path(str(path))
         # If the root path is not in self.repos_dictionary, it can't be
         # a repository which the user has access to. So in this case,
-        # the resource is not a found and therefore not a dictionary.
+        # the resource is not found and therefore not a dictionary.
         if id is None:
             return False
 
@@ -935,14 +938,12 @@ class ARCfs(FS):
         """
         logging.debug(f"In Upload with path: {path}\n")
         with self._lock:
-
             if path in [".", "./", ""]:
                 path = "/"
             if path != "/":
                 path = path.strip("/")
 
             parent_dir = Path(path).parents[0]
-
             if not self.isdir(str(parent_dir)):
                 message = str(parent_dir)
                 raise ResourceNotFound(path, msg=message)
@@ -950,78 +951,95 @@ class ARCfs(FS):
                 raise FileExists(path)
 
             repo_id, repo_path = self._get_repo_id_path(path)
+            repo_ref = (FileStreamHandler._get_default_branch(repo_id, self.token, self.server_url)
+                        if ref is None else ref)
 
-            repo_ref = FileStreamHandler._get_default_branch(repo_id,
-                                                             self.token,
-                                                             self.server_url)\
-                if ref is None else ref
-
-            info = utils.compute_size_sha(file)
+            info = utils.compute_size_sha(file)  # must rewind before uploading
             namespace = self._get_namespace(repo_path)
             branch = LFSFile._create_branch(self.token, repo_ref, repo_id)
             sha256sum = info['shasum'].hexdigest()
 
             if chunk_size is None:
-                chunk_size = 4096
+                chunk_size = 4 * 1024 * 1024  # 4 MiB sensible default
 
             lfs_object_request_json = {
                 "operation": "upload",
-                "objects": [
-                    {
-                        "oid": f"{sha256sum}",
-                        "size": f"{info['size']}"
-                    }
-                ],
-                "transfers": [
-                    "lfs-standalone-file",
-                    "basic"
-                ],
-                "ref": {
-                    "name": "refs/heads/" + repo_ref
-                },
-                "hash_algo": "sha256"
+                "objects": [{"oid": sha256sum, "size": int(info['size'])}],
+                "transfers": ["lfs-standalone-file", "basic"],
+                "ref": {"name": "refs/heads/" + repo_ref},
+                "hash_algo": "sha256",
             }
 
-            headers = {'Accept': 'application/vnd.git-lfs+json',
-                       'Content-type': 'application/vnd.git-lfs+json'}
+            headers = {
+                "Accept": "application/vnd.git-lfs+json",
+                "Content-Type": "application/vnd.git-lfs+json",
+            }
 
-            # construct the download URL for the lfs resource
-            download_url = "".join([
-                "https://oauth2:",
-                f"{self.token}",
-                f"@{self.hostname}/",
-                f"{namespace}.git/info/lfs/objects/batch"
-            ])
+            batch_url = f"https://{self.hostname}/{namespace}.git/info/lfs/objects/batch"
 
-            r = requests.post(download_url, json=lfs_object_request_json,
-                              headers=headers)
-            res = r.json()
+            r = requests.post(
+                batch_url,
+                json=lfs_object_request_json,
+                headers=headers,
+                auth=HTTPBasicAuth("oauth2", self.token),
+                timeout=30,
+            )
+
+            # If server errored, surface the body and stop before trying to decode JSON
+            if not r.ok:
+                logging.error(
+                    "LFS batch failed: %s %s\nHeaders: %s\nBody (first 1k): %s",
+                    r.status_code, r.reason, r.headers, r.text[:1024]
+                )
+                r.raise_for_status()  # will raise HTTPError with status & body
+
+            # Be defensive about content-type & JSON decoding
+            if "application/json" not in r.headers.get("Content-Type", "") \
+            and "application/vnd.git-lfs+json" not in r.headers.get("Content-Type", ""):
+                logging.error("Unexpected Content-Type from LFS batch: %s; body: %s",
+                            r.headers.get("Content-Type"), r.text[:1024])
+                raise RuntimeError("LFS batch returned non-JSON response")
 
             try:
-                header_up = res["objects"][0]["actions"]["upload"]["header"]
-                url_upload = res["objects"][0]["actions"]["upload"]["href"]
-                header_up.pop("Transfer-Encoding")
+                res = r.json()
+            except JSONDecodeError:
+                logging.error("Failed to decode LFS batch JSON; body (first 1k): %s", r.text[:1024])
+                raise
+
+            try:
+                obj0 = res["objects"][0]
+                upload_action = obj0["actions"]["upload"]
+                header_up = dict(upload_action.get("header", {}))
+                url_upload = upload_action["href"]
+                # Avoid KeyError if not present
+                header_up.pop("Transfer-Encoding", None)
+
+                # (Re)wind and stream upload with chosen chunk_size
                 file.seek(0, 0)
-                res = requests.put(url_upload,              # NOQA
-                                   headers=header_up,
-                                   data=iter(lambda: file.read(4096*4096),
-                                             b""))
-                # Almost certainly, the LFS-File was already uploaded. in this
-                # case, just update the pointer file and create a merge request
+                put_res = requests.put(
+                    url_upload,
+                    headers=header_up,
+                    data=iter(lambda: file.read(chunk_size), b""),
+                    timeout=300,
+                )
+
+                if not put_res.ok:
+                    logging.error("LFS object upload failed: %s %s\nHeaders: %s\nBody: %s",
+                                put_res.status_code, put_res.reason, put_res.headers, put_res.text[:1024])
+                    put_res.raise_for_status()
+
+                # If there is no 'upload' action, it usually means the object already exists on the server.
             except KeyError:
+                # Likely already present; proceed to pointer commit.
                 pass
 
+            # Finish pointer, attributes, MR
             path = "/".join(part for part in Path(path).parts[1:])
             path_sanitized = utils.clean_file_ext(path)
-            LFSFile._commit_pointer_file(path_sanitized, info["shasum"],
-                                         repo_id, self.token,
-                                         info["size"], branch)
-
-            path = "/".join(part for part in Path(path).parts[1:])
-            path = Path(path)
-            LFSFile._modify_gitattributes(repo_id, self.token, ref, path)
-            LFSFile._create_merge_request(repo_id, self.token,
-                                          repo_ref, branch)
+            LFSFile._commit_pointer_file(path_sanitized, info["shasum"], repo_id, self.token, info["size"], branch)
+            path_p = Path(path)
+            LFSFile._modify_gitattributes(repo_id, self.token, branch, path_p)
+            LFSFile._create_merge_request(repo_id, self.token, repo_ref, branch)
 
     def makedir(self, path: str, permissions: Permissions = None,
                 recreate: bool = False):
@@ -1083,3 +1101,16 @@ class ARCfs(FS):
 
     def setinfo():
         raise Unsupported
+
+if __name__ == "__main__":
+    token = "SeJUzLJyfQmMddvjsz4u"
+    url = "https://git.nfdi4plants.org"
+    arcfs = ARCfs(token, url)
+    #blablablab = arcfs.listdir("/")
+    test = arcfs.listdir('test-testetstestet2124')
+    bla = arcfs.getinfo('test-testetstestet2124')
+    arcfs.upload('test-testetstestet2124/testfile.txt', open('/home/Julian/Repositories/ARCfs/ARCfs/src/gitlab_arc_fs/testfile.txt', 'rb'))
+    print(bla)
+
+    
+        

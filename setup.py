@@ -13,13 +13,13 @@ setup(
     ],
     entry_points={
         'fs.opener': [
-            'arcfs = gitlab_arc_fs.opener:ARCfsOpener',
+            'arcfs = gitlab_arc_fs.opener:ARCfsOpener'
         ]
     },
     license="GPLv3",
     packages=['gitlab_arc_fs'],
     package_dir={'gitlab_arc_fs': 'src/gitlab_arc_fs'},
-    version="0.0.15.dev1",
+    version="0.0.17.dev1",
     url="https://github.com/nfdi4plants/ARCfs",
     python_requires='>=3.8'
 )

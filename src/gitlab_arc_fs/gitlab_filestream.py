@@ -256,3 +256,4 @@ class FileStreamHandler():
             raise SystemExit(e)
 
         return r
+

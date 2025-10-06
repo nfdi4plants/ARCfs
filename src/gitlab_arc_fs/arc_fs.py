@@ -126,7 +126,6 @@ class ARCfs(FS):
         # More information: https://docs.pyfilesystem.org/en/latest/info.html
         self.info_dict = {}
         self._build_initial_repository_info()
-        print("lol")
 
     def _build_initial_repository_info(self) -> None:
         """
@@ -1101,16 +1100,3 @@ class ARCfs(FS):
 
     def setinfo():
         raise Unsupported
-
-if __name__ == "__main__":
-    token = "SeJUzLJyfQmMddvjsz4u"
-    url = "https://git.nfdi4plants.org"
-    arcfs = ARCfs(token, url)
-    #blablablab = arcfs.listdir("/")
-    test = arcfs.listdir('test-testetstestet2124')
-    bla = arcfs.getinfo('test-testetstestet2124')
-    arcfs.upload('test-testetstestet2124/testfile.txt', open('/home/Julian/Repositories/ARCfs/ARCfs/src/gitlab_arc_fs/testfile.txt', 'rb'))
-    print(bla)
-
-    
-        

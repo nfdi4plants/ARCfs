@@ -1,10 +1,13 @@
 import requests
 import urllib
+import urllib.parse
 from hashlib import sha256
 from datetime import datetime
 import io  # NOQA
 import tempfile
 from json import JSONDecodeError
+import logging
+from requests.auth import HTTPBasicAuth
 
 try:
     from .gitlab_filestream import FileStreamHandler
@@ -22,7 +25,7 @@ class LFSFile(tempfile.SpooledTemporaryFile):
                  host: str,
                  namespace: str,
                  repo_id: str,
-                 ref: str = None):
+                 ref: str = ""):
         """
         Constructor for the LSF file class.
 
@@ -126,66 +129,96 @@ class LFSFile(tempfile.SpooledTemporaryFile):
         file_size = super().tell()
 
         return file_size
-
-    def _upload_lfs_file(self,
-                         file_size):
+    
+    def _upload_lfs_file(self, file_size: int) -> None:
         """
-        Uploads a LFS file tp a GitLab repository.
+        Upload an LFS object to a GitLab repository.
 
         Args:
-            file_size (int): The site of the file contents
+            file_size (int): Size of the file contents in bytes.
         """
         sha256 = self.shasum.hexdigest()
 
+        # IMPORTANT: size must be an integer, not a string
         lfs_object_request_json = {
             "operation": "upload",
-            "objects": [
-                {
-                    "oid": f"{sha256}",
-                    "size": f"{file_size}"
-                }
-            ],
-            "transfers": [
-                "lfs-standalone-file",
-                "basic"
-            ],
-            "ref": {
-                "name": "refs/heads/" + self.ref
-            },
-            "hash_algo": "sha256"
+            "objects": [{"oid": sha256, "size": int(file_size)}],
+            "transfers": ["lfs-standalone-file", "basic"],
+            "ref": {"name": "refs/heads/" + self.ref},
+            "hash_algo": "sha256",
         }
 
-        headers = {'Accept': 'application/vnd.git-lfs+json',
-                   'Content-type': 'application/vnd.git-lfs+json'}
+        headers = {
+            "Accept": "application/vnd.git-lfs+json",
+            "Content-Type": "application/vnd.git-lfs+json",
+        }
 
-        # construct the download URL for the lfs resource
-        download_url = "".join([
-            "https://oauth2:",
-            f"{self.token}",
-            f"@{self.host}/",
-            f"{self.namespace}.git/info/lfs/objects/batch"
-        ])
+        # Clean URL + proper Basic auth ("oauth2": <token>)
+        batch_url = f"https://{self.host}/{self.namespace}.git/info/lfs/objects/batch"
 
-        r = requests.post(download_url, json=lfs_object_request_json,
-                          headers=headers)
-        result = r.json()
+        r = requests.post(
+            batch_url,
+            json=lfs_object_request_json,
+            headers=headers,
+            auth=HTTPBasicAuth("oauth2", self.token),
+            timeout=30,
+        )
+
+        if not r.ok:
+            logging.error(
+                "LFS batch failed: %s %s\nHeaders: %s\nBody (first 1k): %s",
+                r.status_code, r.reason, r.headers, r.text[:1024],
+            )
+            r.raise_for_status()
+
+        ctype = r.headers.get("Content-Type", "")
+        if ("application/json" not in ctype
+                and "application/vnd.git-lfs+json" not in ctype):
+            logging.error("Unexpected Content-Type from LFS batch: %s; body: %s",
+                        ctype, r.text[:1024])
+            raise RuntimeError("LFS batch returned non-JSON response")
 
         try:
-            header_upload = result["objects"][0]["actions"]["upload"]["header"]
-            url_upload = result["objects"][0]["actions"]["upload"]["href"]
-            header_upload.pop("Transfer-Encoding")
-            self.seek(0, 0)
-            res = requests.put(url_upload,              # NOQA
-                               headers=header_upload,
-                               data=iter(lambda: self.read(4096*4096), b""))
+            result = r.json()
+        except JSONDecodeError:
+            logging.error("Failed to decode LFS batch JSON; body (first 1k): %s",
+                        r.text[:1024])
+            raise
+
+        # If 'upload' action is missing, object likely exists already
+        try:
+            obj0 = result["objects"][0]
+            upload_action = obj0["actions"]["upload"]
+            header_upload = dict(upload_action.get("header", {}))
+            url_upload = upload_action["href"]
         except KeyError:
-            pass
+            # No upload required (already on server).
+            return
+
+        header_upload.pop("Transfer-Encoding", None)
+
+        # Stream the file in chunks
+        chunk_size = 4 * 1024 * 1024  # 4 MiB
+        self.seek(0, 0)
+        put_res = requests.put(
+            url_upload,
+            headers=header_upload,
+            data=iter(lambda: self.read(chunk_size), b""),
+            timeout=300,
+        )
+
+        if not put_res.ok:
+            logging.error(
+                "LFS object upload failed: %s %s\nHeaders: %s\nBody (first 1k): %s",
+                put_res.status_code, put_res.reason, put_res.headers, put_res.text[:1024],
+            )
+            put_res.raise_for_status()
 
     @staticmethod
     def _create_branch(token,
                        ref,
                        repo_id,
-                       new_branch: str = None) -> str:
+                       new_branch: str = "") -> str:
         """_summary_
 
         Args:

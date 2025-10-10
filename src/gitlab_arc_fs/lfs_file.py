@@ -226,7 +226,7 @@ class LFSFile(tempfile.SpooledTemporaryFile):
         Returns:
             new_branch (str): _description
         """
-        if new_branch is None:
+        if new_branch == "":
             date_time = datetime.now()
             year = date_time.year
             month = date_time.month
@@ -371,3 +371,4 @@ class LFSFile(tempfile.SpooledTemporaryFile):
     # - implement/handle fileno(), isatty(), readline()
     #   readlines(), seek(), seekable(), tell(), truncate()
     #   writelines(), __del__()
+

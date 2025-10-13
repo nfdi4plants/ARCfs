@@ -953,13 +953,13 @@ class ARCfs(FS):
             repo_ref = (FileStreamHandler._get_default_branch(repo_id, self.token, self.server_url)
                         if ref is None else ref)
 
-            info = utils.compute_size_sha(file)  # must rewind before uploading
+            info = utils.compute_size_sha(file)
             namespace = self._get_namespace(repo_path)
             branch = LFSFile._create_branch(self.token, repo_ref, repo_id)
             sha256sum = info['shasum'].hexdigest()
 
             if chunk_size is None:
-                chunk_size = 4 * 1024 * 1024  # 4 MiB sensible default
+                chunk_size = 4 * 1024 * 1024  # 4 MiB default
 
             lfs_object_request_json = {
                 "operation": "upload",
@@ -990,9 +990,8 @@ class ARCfs(FS):
                     "LFS batch failed: %s %s\nHeaders: %s\nBody (first 1k): %s",
                     r.status_code, r.reason, r.headers, r.text[:1024]
                 )
-                r.raise_for_status()  # will raise HTTPError with status & body
+                r.raise_for_status() 
 
-            # Be defensive about content-type & JSON decoding
             if "application/json" not in r.headers.get("Content-Type", "") \
             and "application/vnd.git-lfs+json" not in r.headers.get("Content-Type", ""):
                 logging.error("Unexpected Content-Type from LFS batch: %s; body: %s",

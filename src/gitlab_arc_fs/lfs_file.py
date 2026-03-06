@@ -8,6 +8,7 @@ import tempfile
 from json import JSONDecodeError
 import logging
 from requests.auth import HTTPBasicAuth
+from pathlib import Path
 
 try:
     from .gitlab_filestream import FileStreamHandler
@@ -254,11 +255,11 @@ class LFSFile(tempfile.SpooledTemporaryFile):
 
     @staticmethod
     def _commit_pointer_file(path: str,
-                             shasum,
-                             repo_id,
-                             token,
-                             file_size: str,
-                             branch: str) -> None:
+                            shasum,                 # (unchanged param name)
+                            repo_id,
+                            token,
+                            file_size,
+                            branch: str) -> None:
         """
         Commits a pointer file to the specified branch.
         The content of this pointer file is the given size as well as the
@@ -268,10 +269,21 @@ class LFSFile(tempfile.SpooledTemporaryFile):
             branch (str): The branch to commit the pointer file to.
             file_size (int): The size of the file content.
         """
+
         repopath_encoded = urllib.parse.quote(path, safe="")
-        sha256sum = shasum.hexdigest()
+
+        # ORIGINAL: sha256sum = shasum.hexdigest()
+        # CHANGED: allow passing either a hasher or a ready hex string
+        if hasattr(shasum, "hexdigest"):
+            sha256sum = shasum.hexdigest()
+        else:
+            sha256sum = str(shasum)
+
+        size_int = int(file_size)
+
         pointer_file_content = (f"version https://git-lfs.github.com/spec/v1\n"
-                                f"oid sha256:{sha256sum}\nsize {file_size}\n")
+                                f"oid sha256:{sha256sum}\n"
+                                f"size {size_int}\n")
 
         post_url = ("https://git.nfdi4plants.org/api/v4/projects/"
                     f"{repo_id}/repository/files/{repopath_encoded}")
@@ -287,12 +299,62 @@ class LFSFile(tempfile.SpooledTemporaryFile):
             'commit_message': 'create a new lfs pointer file',
         }
 
-        response = requests.post(
+        resp = requests.post(
             post_url,
             headers=headers,
             json=json_data,
         )
-        res = response.json()  # NOQA
+
+        if not resp.ok:
+            # As I commit pointer files with unique names
+            # (based on file sha), this should nonly ever happen
+            # if there is already a correct pointer file in this branch.
+            logging.error("Pointer file commit failed: %s %s %s",
+                           resp.status_code, resp.reason, resp.text[:800])
+            pass
+
+    @staticmethod
+    def _rename_pointer_only(path: str,
+                            sha_hex: str,
+                            repo_id,
+                            token,
+                            branch: str) -> None:
+        """
+        Rename a previously-created pointer from <dir>/<sha> to the final <dir>/<filename>.
+
+        Assumes the pointer file already exists at the tmp path built as
+        f"<dir>/<sha_hex>".
+        """
+        # Build paths
+        rel_path = path.strip('/')
+        rel_dir = str(Path(rel_path).parent).strip('.')
+        tmp_path = f"{rel_dir + '/' if rel_dir else ''}{sha_hex}"
+
+        post_commits = f"https://git.nfdi4plants.org/api/v4/projects/{repo_id}/repository/commits"
+        headers = {'PRIVATE-TOKEN': f'{token}', 'Content-Type': 'application/json'}
+
+        logging.info("Rename-only: %s -> %s", tmp_path, rel_path)
+        resp = requests.post(
+            post_commits,
+            headers=headers,
+            json={
+                'branch': branch,
+                'commit_message': f'rename tmp LFS ptr to {rel_path}',
+                'actions': [
+                    {
+                        'action': 'move',
+                        'previous_path': tmp_path,
+                        'file_path': rel_path,
+                    }
+                ],
+            },
+            timeout=30,
+        )
+
+        if not resp.ok:
+            logging.error("Rename-only commit failed: %s %s %s",
+                        resp.status_code, resp.reason, resp.text[:800])
+            pass
 
     @staticmethod
     def _create_merge_request(repo_id,
@@ -345,7 +407,7 @@ class LFSFile(tempfile.SpooledTemporaryFile):
         action = "update"
         response = requests.get(download_url, headers=headers)
 
-        new_line = f"{path} filter=lfs diff=lfs merge=lfs -text\n"
+        new_line = f"# Leave following line: auto generated\n{path} filter=lfs diff=lfs merge=lfs -text \n"
 
         try:
             response.raise_for_status()

@@ -946,6 +946,7 @@ class ARCfs(FS):
                 path = "/"
             if path != "/":
                 path = path.strip("/")
+                path = utils.clean_file_ext(path)
 
             parent_dir = Path(path).parents[0]
             if not self.isdir(str(parent_dir)):
